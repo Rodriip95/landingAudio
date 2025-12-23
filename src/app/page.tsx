@@ -2,6 +2,7 @@
 
 import { useRef, useState, useEffect } from "react";
 import { Play, Pause, RotateCcw } from "lucide-react";
+import Link from "next/link"
 
 export default function HomePage() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -90,8 +91,14 @@ export default function HomePage() {
           ))}
         </div>
 
-        <h1 className="text-xl font-semibold mb-1">Te Amo Mi Amor</h1>
-        <p className="text-sm text-zinc-400 mb-6">Este es el primer audio que me mandaste, es el primer mensaje de nuestro chat y escucharlo me hace muy feliz, porque fue el inicio de todo.</p>
+        <h1 className="text-xl font-semibold mb-1">Feliz Cumple Mi Amor</h1>
+        <Link
+          href="/cumple"
+          className="px-4 py-2 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition"
+        >
+          Ver regalo 🎂
+        </Link>
+        <p className="text-sm text-zinc-400 mb-6 mt-2">Este es el primer audio que me mandaste, es el primer mensaje de nuestro chat y escucharlo me hace muy feliz, porque fue el inicio de todo.</p>
 
         {/* ▶ Botón principal */}
         <button
